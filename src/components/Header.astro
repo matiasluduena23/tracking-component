@@ -1,0 +1,52 @@
+---
+import Navbar from './Navbar.astro';
+import icon from '../assets/icon-hamburger.svg';
+---
+
+<header>
+    <div class="container">
+        <nav class="flex">
+            <a href="/" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    ><g fill="#323334" fill-rule="evenodd"
+                        ><path
+                            d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z"
+                        ></path></g
+                    ></svg
+                >
+            </a>
+            <button
+                class="hamburger"
+                aria-expanded="false"
+                aria-controls="navigation"
+            >
+                <img src={icon.src} alt="hamburger icon" />
+            </button>
+            <Navbar />
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        padding-block: 3rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        .hamburger {
+            display: block;
+        }
+    }
+</style>

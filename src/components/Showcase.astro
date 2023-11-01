@@ -1,0 +1,47 @@
+---
+import Header from './Header.astro';
+import SectionText from '../components/SectionText.astro';
+import pcImage from '../assets/illustration-devices.svg';
+import { Image } from 'astro:assets';
+---
+
+<main>
+    <Header />
+    <div class="content-container">
+        <div class="content-container-img">
+            <Image src={pcImage} alt="image of two devices a pc and a mobile" />
+        </div>
+
+        <SectionText />
+    </div>
+</main>
+
+<style>
+    main {
+        min-height: 100vh;
+    }
+
+    main::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 50%;
+        right: 0;
+        left: 50%;
+        background-color: var(--light-grayish-blue);
+        border-bottom-left-radius: 50px;
+    }
+
+    .content-container {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .content-container-img img {
+        margin-left: 0;
+        height: 100%;
+    }
+</style>
