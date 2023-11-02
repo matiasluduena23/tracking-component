@@ -61,6 +61,11 @@ img {
 }
        
 
-.hamburger[aria-expanded="true"] + #navbar {
+.hamburger[aria-expanded="true"] + #navigation {
   transform: translateX(0);
+}
+
+.hamburger[aria-expanded="true"] > img {
+  content: url('../assets/icon-close.svg');
+  transform: rotate(180deg);
 }

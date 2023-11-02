@@ -1,5 +1,5 @@
 <section>
-    <div class="container">
+    <div>
         <p class="up-title"><span>New</span> Monograph Dashboard</p>
 
         <div class="wrap-title">
@@ -37,7 +37,7 @@
     }
 
     h1 {
-        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-size: clamp(2rem, 6vw, 4rem);
         font-weight: 700;
         color: var(--very-dark-blue);
         margin-block: 1.2rem;
@@ -52,6 +52,7 @@
         font-size: 18px;
         font-family: var(--ff-2);
     }
+
     .body-p-content {
         width: max-content;
     }
@@ -59,7 +60,7 @@
     .wrap-button {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         gap: 1rem;
         margin-top: 2rem;
     }
@@ -83,5 +84,33 @@
         border: none;
         cursor: pointer;
         border-radius: 5px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    @media (min-width: 800px) {
+        section {
+            width: 50%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .wrap-title {
+            margin-block: 2rem;
+        }
+
+        .wrap-button {
+            margin-top: 3.5rem;
+        }
+
+        .wrap-button > p {
+            letter-spacing: 3px;
+        }
+
+        .wrap-button button {
+            padding-inline: 2rem;
+        }
     }
 </style>
